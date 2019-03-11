@@ -24,3 +24,6 @@ This loot table will prompt the user to input the difficult of the encounter or 
 - Look for ways to optimize code?
 - Week 6: 
 - Testing to make sure there are no bugs
+## Team Members:
+- Nick   Hale Team Lead
+- Kenton Kwok Code Tester

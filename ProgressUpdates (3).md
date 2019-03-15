@@ -1,22 +1,23 @@
-# Progress Updates (Oct 29 - Nov 30)
+# Progress Updates (Mar 8 - Mar 15)
 
-## Week 1 (Oct 29 - Nov 5)
+## Week 1 (Mar 8 - Mar 15)
 
 ### What did your team do last week?
 * Set up repository
-* Identify deliverables
+* Brainstormed what we needed to do the make the loot generation
+* Created a basic GUI of the generator
 * Make plan
 
 ### What will you do this week?
-* Investigate different solutions
-* Prototype plugin server
+* Look into loot tables used for generation
+* Usage of the difficuly rating 
 
 ### Any blocking issues/challenges need to be addressed?
-* Get server to work on Linux machines, but not Windows
-* Client-server communication is flaky
+* Proper implimentation of the difficulty system
+ 
 
 
-## Week 2 (Nov 5 - Nov 12)
+## Week 2 (Mar 15 - Mar 22)
 
 ### What did your team do last week?
 ...

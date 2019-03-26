@@ -25,6 +25,7 @@ public abstract class LootEvent {
 	public boolean getmagicItems() {
 		return true;
 		
+		
 	}
 	
 	public boolean getMundaneItems() {

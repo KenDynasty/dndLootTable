@@ -1,9 +1,6 @@
 package GUI;
 	
-import java.io.File;
 
-import application.EnemyEncounter;
-import application.LootTable;
 import application.treasureChest;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -28,12 +25,7 @@ public class Main extends Application {
 			primaryStage.show();
 			EnemyEncounter enemies = new EnemyEncounter();
 			treasureChest treasure = new treasureChest();
-			LootTable tableA = new LootTable(new File("tableA"));
-			LootTable tableB = new LootTable(new File("tableB"));
-			LootTable tableC = new LootTable(new File("tableC"));
-			LootTable tableD = new LootTable(new File("tableD"));
-			LootTable tableE = new LootTable(new File("tableE"));
-			
+
 			Object Select = treasure;
 			
 			

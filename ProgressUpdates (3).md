@@ -20,10 +20,15 @@
 ## Week 2 (Mar 15 - Mar 22)
 
 ### What did your team do last week?
-...
+* kept working on class design, came up with a more effective design
+* figured out how to implement the different difficulty systems for TreasureChest and Enemy Encounter
+
 
 ### What will you do this week?
-...
+* Began planning on what the other scenes will need to look like
+* Created the EnemyEncounter, TreasureChest, LootTable, and, LootEvent classes
+* Created RollItem Interface to implement into lootEvent
+* Decided on using SceneBuilder for scenes so we can implement the controller classes
 
 ### Any blocking issues/challenges need to be addressed?
-...
+* nothing so far

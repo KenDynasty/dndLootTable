@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="37.0" layoutY="86.0" prefHeight="100.0" prefWidth="562.0" spacing="10.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want magical Items?" wrappingWidth="167.13671875" />
+            <CheckBox mnemonicParsing="false" text="Yes" />
+         </children>
+      </HBox>
+      <HBox layoutX="38.0" layoutY="186.0" prefHeight="100.0" prefWidth="562.0" spacing="10.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want mundane items?" />
+            <CheckBox mnemonicParsing="false" text="Yes" />
+         </children></HBox>
+      <HBox layoutX="37.0" layoutY="286.0" prefHeight="100.0" prefWidth="562.0" spacing="10.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want gold?" />
+            <CheckBox mnemonicParsing="false" text="Yes" />
+         </children></HBox>
+      <HBox layoutX="14.0" layoutY="46.0" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <ComboBox prefWidth="150.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

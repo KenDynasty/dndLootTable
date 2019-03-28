@@ -1,6 +1,6 @@
 package GUI;
 	
-import application.EnemyEncounter;
+
 import application.treasureChest;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -25,6 +25,7 @@ public class Main extends Application {
 			primaryStage.show();
 			EnemyEncounter enemies = new EnemyEncounter();
 			treasureChest treasure = new treasureChest();
+
 			Object Select = treasure;
 			
 			

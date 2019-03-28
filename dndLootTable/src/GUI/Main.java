@@ -1,7 +1,10 @@
-package application;
+package GUI;
 	
 import java.io.File;
 
+import application.EnemyEncounter;
+import application.LootTable;
+import application.treasureChest;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

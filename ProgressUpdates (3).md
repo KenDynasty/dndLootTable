@@ -32,3 +32,22 @@
 
 ### Any blocking issues/challenges need to be addressed?
 * nothing so far
+
+
+
+
+## Week 3 (Mar 22 - Mar 29)
+
+### What did your team do last week?
+* Finished up most of the scenes
+* Made an aditional package for GUI elements to keep things more organized
+
+
+### What will you do this week?
+* Finish the scenes
+* Finish implementing the magic items for treasurechest
+* Figure out how to implement mundance item (regular items that can be sold for gold)
+* Figure out how to implement gold generation
+
+### Any blocking issues/challenges need to be addressed?
+* How to assign the value of a text field to the variable of an object

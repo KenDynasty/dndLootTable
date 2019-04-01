@@ -1,8 +1,9 @@
 package application;
 
 public interface RollItem {
-	String roll();
-	String reroll();
+	String[] roll(int cr);
+	void reroll();
+	void selectTemplate();
 	
 
 }

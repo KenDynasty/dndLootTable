@@ -1,16 +1,26 @@
 package application;
 
+import java.util.ArrayList;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+
+
+/**
+ * 
+ * @author halen
+ *
+ */
+
 public abstract class LootEvent {
 	public static int difficulty;
 	public static boolean magicItems;
 	public static int numItems;
-	public static String[]loot;
+	public static ArrayList<String>loot = new ArrayList<String>();;
 	public  Scene[] scenes;
 	
 	public LootEvent() {

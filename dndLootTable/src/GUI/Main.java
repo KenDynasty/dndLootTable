@@ -14,7 +14,11 @@ import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+
+import java.io.File;
+
 import application.EnemyEncounter;
+import application.LootTable;
 
 
 public class Main extends Application {
@@ -24,6 +28,9 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			LootTable tableA = new LootTable(new File("tableA"));
+			LootTable tableB = new LootTable(new File("tableB"));
+			
 			window = primaryStage;
 			final FXMLLoader loader = new FXMLLoader(getClass().getResource("bootMenu.fxml"));
 			final AnchorPane root = loader.load();

@@ -5,7 +5,9 @@ public class treasureChest extends LootEvent implements RollItem {
 	public static boolean gold;
 	public static boolean mundane;
 	public static boolean magic;
-	public static TreasureTable selected;
+	public int[] numrolls;
+	public String[] selectedTable
+	
 
 	@Override
 	public String[] roll(int cr) {
@@ -38,10 +40,16 @@ public class treasureChest extends LootEvent implements RollItem {
 		
 	}
 
-	@Override
-	public void selectTemplate() {
-		// TODO Auto-generated method stub
-		
+	public void rollingforMagic(int difficulty, int d100) {
+		if(difficulty <= 4) {
+			
+		}else if(difficulty <=10) {
+			
+		}else if(difficulty <=16) {
+			
+		}else {
+			
+		}
 	}
 	
 	public String showFinalResults() {

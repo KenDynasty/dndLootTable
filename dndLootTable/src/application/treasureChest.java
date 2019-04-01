@@ -38,4 +38,17 @@ public class treasureChest extends LootEvent implements RollItem {
 		
 	}
 
+	@Override
+	public void selectTemplate() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public String showFinalResults() {
+		//for(int i = 0; i <  )
+		
+		
+		return ("Reeeee \n E");
+	}
+
 }

@@ -20,7 +20,7 @@ public abstract class LootEvent {
 	public int difficulty;
 	public boolean magicItems;
 	public int numItems;
-	public ArrayList<String>loot = new ArrayList<String>();;
+	public StringBuilder loot = new StringBuilder();
 	public Scene[] scenes;
 	public StringBuilder finalResults;
 	public String goldValue;

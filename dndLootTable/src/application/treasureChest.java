@@ -7,7 +7,7 @@ public class treasureChest extends LootEvent{
 	
 	public static boolean gold = false;
 	public static boolean mundane = false;
-	public static boolean magic = false;
+	public static boolean magic = true;
 	public int[] numrolls;
 	public static TreasureRollsOnTable selectedTable;
 	public static LootTable magicTable;
@@ -38,9 +38,9 @@ public treasureChest() {
 		tableF = new LootTable(new File("tableF"));
 		tableG = new LootTable(new File("tableG"));
 		roll0to4 = new TreasureRollsOnTable(new File ("rolls0to4.txt"));
-		roll5to10 = new TreasureRollsOnTable(new File("rolls5to10.txt"));
-		roll11to16 = new TreasureRollsOnTable(new File("rolls11to16.txt"));
-		roll17plus = new TreasureRollsOnTable(new File("rolls17plus.txt"));
+		//roll5to10 = new TreasureRollsOnTable(new File("rolls5to10.txt"));
+		//roll11to16 = new TreasureRollsOnTable(new File("rolls11to16.txt"));
+		//roll17plus = new TreasureRollsOnTable(new File("rolls17plus.txt"));
 	} catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -50,6 +50,7 @@ public treasureChest() {
 	}
 
 	public static void roll(int cr) {
+		loot.append("The Party recieves: \n");
 		int d100 = (int) (Math.random() *100);
 		
 		if(gold) {
@@ -72,7 +73,7 @@ public treasureChest() {
 		
 	}
 	
-	public String showFinalResults() {
+	public static String showFinalResults() {
 		return loot.toString();
 	}
 

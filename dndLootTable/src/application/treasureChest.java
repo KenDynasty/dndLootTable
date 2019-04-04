@@ -37,8 +37,8 @@ public treasureChest() {
 		tableE = new LootTable(new File("tableE"));
 		tableF = new LootTable(new File("tableF"));
 		tableG = new LootTable(new File("tableG"));
-		roll0to4 = new TreasureRollsOnTable(new File ("rolls0to4.txt"));
-		//roll5to10 = new TreasureRollsOnTable(new File("rolls5to10.txt"));
+		//roll0to4 = new TreasureRollsOnTable(new File ("rolls0to4.txt"));
+		roll5to10 = new TreasureRollsOnTable(new File("roll5to10"));
 		//roll11to16 = new TreasureRollsOnTable(new File("rolls11to16.txt"));
 		//roll17plus = new TreasureRollsOnTable(new File("rolls17plus.txt"));
 	} catch (FileNotFoundException e) {
@@ -61,8 +61,8 @@ public treasureChest() {
 		}
 		if(magic) {
 			selectedTable = determineTable(cr);
-			magicTable = getLootTable(selectedTable.getTable(d100));
-			for(int i = 0; i < selectedTable.getRolls(d100); i++) {
+			magicTable = getLootTable("A");
+			for(int i = 0; i < 4; i++) {
 				loot.append(magicTable.getContents((int)(Math.random()*100)));
 				loot.append("\n");
 			}

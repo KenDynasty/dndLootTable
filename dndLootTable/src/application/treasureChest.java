@@ -3,46 +3,53 @@ package application;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class treasureChest extends LootEvent implements RollItem {
+public class treasureChest extends LootEvent{
 	
-	public static boolean gold;
-	public static boolean mundane;
-	public static boolean magic;
+	public static boolean gold = false;
+	public static boolean mundane = false;
+	public static boolean magic = false;
 	public int[] numrolls;
-	public TreasureRollsOnTable selectedTable;
-	public LootTable magicTable;
-	private LootTable tableA;
-	private LootTable tableB;
-	private LootTable tableC;
-	private LootTable tableD;
-	private LootTable tableE;
-	private LootTable tableF;
-	private LootTable tableG;
-	private TreasureRollsOnTable roll0to4;
-	private TreasureRollsOnTable roll5to10;
-	private TreasureRollsOnTable roll11to16;
-	private TreasureRollsOnTable roll17plus;
+	public static TreasureRollsOnTable selectedTable;
+	public static LootTable magicTable;
+	private static LootTable tableA;
+	private static LootTable tableB;
+	private static LootTable tableC;
+	private static LootTable tableD;
+	private static LootTable tableE;
+	private static LootTable tableF;
+	private static LootTable tableG;
+	private static TreasureRollsOnTable roll0to4;
+	private static TreasureRollsOnTable roll5to10;
+	private static TreasureRollsOnTable roll11to16;
+	private static TreasureRollsOnTable roll17plus;
 	//Once the table files have been created just get rid of comment
 	//LootTable tableH = new LootTable(new File("tableH"));
 	//LootTable tableI = new LootTable(new File("tableI"));
 	
 
-public treasureChest() throws FileNotFoundException {
-	tableA = new LootTable(new File("tableA"));
-	tableB = new LootTable(new File("tableB"));
-	tableC = new LootTable(new File("tableC"));
-	tableD = new LootTable(new File("tableD"));
-	tableE = new LootTable(new File("tableE"));
-	tableF = new LootTable(new File("tableF"));
-	tableG = new LootTable(new File("tableG"));
-	roll0to4 = new TreasureRollsOnTable(new File ("rolls0to4.txt"));
-	roll5to10 = new TreasureRollsOnTable(new File("rolls5to10.txt"));
-	roll11to16 = new TreasureRollsOnTable(new File("rolls11to16.txt"));
-	roll17plus = new TreasureRollsOnTable(new File("rolls17plus.txt"));
+public treasureChest() {
+	
+	try {
+		tableA = new LootTable(new File("tableA"));
+		tableB = new LootTable(new File("tableB"));
+		tableC = new LootTable(new File("tableC"));
+		tableD = new LootTable(new File("tableD"));
+		tableE = new LootTable(new File("tableE"));
+		tableF = new LootTable(new File("tableF"));
+		tableG = new LootTable(new File("tableG"));
+		roll0to4 = new TreasureRollsOnTable(new File ("rolls0to4.txt"));
+		roll5to10 = new TreasureRollsOnTable(new File("rolls5to10.txt"));
+		roll11to16 = new TreasureRollsOnTable(new File("rolls11to16.txt"));
+		roll17plus = new TreasureRollsOnTable(new File("rolls17plus.txt"));
+	} catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
 	
 	}
-	@Override
-	public void roll(int cr) {
+
+	public static void roll(int cr) {
 		int d100 = (int) (Math.random() *100);
 		
 		if(gold) {
@@ -69,8 +76,8 @@ public treasureChest() throws FileNotFoundException {
 		return loot.toString();
 	}
 
-	@Override
-	public void reroll() {
+	
+	public static void reroll() {
 		//clear the stringbuilder
 		loot.trimToSize();
 		roll(difficulty);
@@ -93,7 +100,7 @@ public treasureChest() throws FileNotFoundException {
 	
 	
 	
-	public TreasureRollsOnTable determineTable(int cr) {
+	public static TreasureRollsOnTable determineTable(int cr) {
 		if(cr <=4) {
 			return roll0to4;
 		}
@@ -108,7 +115,7 @@ public treasureChest() throws FileNotFoundException {
 		}
 	}
 	
-	public LootTable getLootTable(String selector) {
+	public static LootTable getLootTable(String selector) {
 		if(selector.equals("A")) {
 			return tableA;
 		}

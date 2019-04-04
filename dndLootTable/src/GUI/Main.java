@@ -23,6 +23,9 @@ import application.LootTable;
 
 public class Main extends Application {
 	
+	public EnemyEncounter enemies = new EnemyEncounter();
+	public treasureChest treasure = new treasureChest();
+	
 	public Stage window;
 	
 	@Override
@@ -45,8 +48,7 @@ public class Main extends Application {
 			
 			primaryStage.setScene(Boot);
 			primaryStage.show();
-			EnemyEncounter enemies = new EnemyEncounter();
-			treasureChest treasure = new treasureChest();
+			
 
 			
 			

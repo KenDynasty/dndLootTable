@@ -51,3 +51,24 @@
 
 ### Any blocking issues/challenges need to be addressed?
 * How to assign the value of a text field to the variable of an object
+
+
+
+
+## Week 4 (Mar 29 - Apr 6)
+
+### What did your team do last week?
+* Finished the scenes
+* Finished logic for treasure hoards
+* Started finishing the controller classes for the scenes
+* began working on the final report documentation
+
+
+### What will you do this week?
+* Finish Enemy Encounter Logic
+* Finish the Scenes
+* Make the scenes look nicer
+
+### Any blocking issues/challenges need to be addressed?
+* No current blocking issues
+

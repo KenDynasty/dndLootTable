@@ -1,39 +1,53 @@
 package application;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class EnemyEncounter extends LootEvent implements RollItem{
-	public int[][] enemies = new int[3][2];
-	public static Scene[] scenes;
+public class EnemyEncounter extends LootEvent implements RollLoot{
+	
+	private static int numEnemies;
+	private static int enemyCr;
+	private static int numAllies;
+	private static LootTable xpTable;
+	private static LootTable goldTable;
 	
 	public EnemyEncounter() {
-		
+		try {
+			xpTable = new LootTable(new File("xpValues.txt"));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-	public void getdifficulty() {
-		int total = 0;
-		for(int i = 0; i < enemies.length; i++) {
-			total += enemies[i][0] * enemies[i][1];
+	public int setDifficulty() {
+		return numEnemies * enemyCr ;
+	}
+	
+
+	@Override
+	public void roll() {
+		difficulty = setDifficulty();
+		String totalXP = xpTable.getContents(difficulty);
+		String xpPerPerson = Integer.toString((Integer.parseInt(totalXP)) / numAllies);
+		loot.append("Each player recieves: " + xpPerPerson + " xp");
+		if(gold) {
+			//goldTable = 
 		}
 		
-		difficulty = total;
 	}
 
 	@Override
-	public void roll(int cr) {
-		// TODO Auto-generated method stub
-	
-	}
-
-	@Override
-	public void reroll() {
+	public void reRoll() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	
-	public void selectTemplate() {
+	public LootTable selectTable() {
 		if (difficulty <= 4) {
 			//select the 0-4 enemy chart
 		}
@@ -46,6 +60,7 @@ public class EnemyEncounter extends LootEvent implements RollItem{
 		else {
 			//select the 17+ chart
 		}
+		return null;
 		// TODO Auto-generated method stub
 		
 	}

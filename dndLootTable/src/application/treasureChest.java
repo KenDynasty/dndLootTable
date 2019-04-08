@@ -18,6 +18,8 @@ public class treasureChest extends LootEvent{
 	private static LootTable tableE;
 	private static LootTable tableF;
 	private static LootTable tableG;
+	private static LootTable tableH;
+	private static LootTable tableI;
 	private static TreasureRollsOnTable roll0to4;
 	private static TreasureRollsOnTable roll5to10;
 	private static TreasureRollsOnTable roll11to16;
@@ -37,6 +39,8 @@ public treasureChest() {
 		tableE = new LootTable(new File("tableE"));
 		tableF = new LootTable(new File("tableF"));
 		tableG = new LootTable(new File("tableG"));
+		tableH = new LootTable(new File("tableH"));
+		tableI = new LootTable(new File("tableI"));
 		//roll0to4 = new TreasureRollsOnTable(new File ("rolls0to4.txt"));
 		roll5to10 = new TreasureRollsOnTable(new File("roll5to10"));
 		//roll11to16 = new TreasureRollsOnTable(new File("rolls11to16.txt"));
@@ -137,6 +141,12 @@ public treasureChest() {
 		}
 		else if(selector.equals("G")) {
 			return tableG;
+		}
+		else if(selector.equals("H")) {
+			return tableH;
+		}
+		else if(selector.equals("I")) {
+			return tableI;
 		}
 		return null;
 	}

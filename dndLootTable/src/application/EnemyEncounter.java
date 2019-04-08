@@ -21,9 +21,9 @@ public class EnemyEncounter extends LootEvent implements RollItem{
 	}
 
 	@Override
-	public String[] roll(int cr) {
+	public void roll(int cr) {
 		// TODO Auto-generated method stub
-		return null;
+	
 	}
 
 	@Override
@@ -32,7 +32,7 @@ public class EnemyEncounter extends LootEvent implements RollItem{
 		
 	}
 
-	@Override
+	
 	public void selectTemplate() {
 		if (difficulty <= 4) {
 			//select the 0-4 enemy chart

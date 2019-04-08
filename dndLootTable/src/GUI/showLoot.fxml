@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane fx:id="lootResults" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="lootResults" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ChestShowLootController">
    <children>
       <Text layoutX="209.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Final Results">
          <font>
             <Font name="Britannic Bold" size="32.0" />
          </font>
       </Text>
-      <Text layoutX="157.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loot" textAlignment="CENTER" wrappingWidth="286.0">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="14.0" />
-         </font>
-      </Text>
+      <Label fx:id="finalResults" layoutX="286.0" layoutY="163.0" text="Loot" />
    </children>
 </AnchorPane>

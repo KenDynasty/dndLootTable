@@ -23,13 +23,21 @@ import application.LootTable;
 
 public class Main extends Application {
 	
+	public EnemyEncounter enemies = new EnemyEncounter();
+	public treasureChest treasure = new treasureChest();
+	
 	public Stage window;
 	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			LootTable tableA = new LootTable(new File("tableA"));
-			LootTable tableB = new LootTable(new File("tableB"));
+			
+			//create lootTable objects for magic item generation
+			
+			
+			
+			//create tables to determine which magic table you should roll on and how many times you should roll on it
+			
 			
 			window = primaryStage;
 			final FXMLLoader loader = new FXMLLoader(getClass().getResource("bootMenu.fxml"));
@@ -40,8 +48,7 @@ public class Main extends Application {
 			
 			primaryStage.setScene(Boot);
 			primaryStage.show();
-			EnemyEncounter enemies = new EnemyEncounter();
-			treasureChest treasure = new treasureChest();
+			
 
 			
 			

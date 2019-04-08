@@ -17,13 +17,10 @@ import javafx.stage.Stage;
  */
 
 public abstract class LootEvent {
-	public int difficulty;
-	public boolean magicItems;
-	public int numItems;
-	public ArrayList<String>loot = new ArrayList<String>();;
-	public Scene[] scenes;
-	public StringBuilder finalResults;
-	public String goldValue;
+	public static int difficulty;
+	public static boolean magicItems;
+	public static int numItems;
+	public static StringBuilder loot = new StringBuilder();
 	
 	public LootEvent() {
 		

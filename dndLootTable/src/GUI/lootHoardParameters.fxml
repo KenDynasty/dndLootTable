@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.lootHoardcontroller">
    <children>
       <HBox layoutX="37.0" layoutY="86.0" prefHeight="100.0" prefWidth="562.0" spacing="10.0">
          <children>
@@ -19,15 +23,17 @@
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want mundane items?" />
             <CheckBox mnemonicParsing="false" text="Yes" />
          </children></HBox>
-      <HBox layoutX="37.0" layoutY="286.0" prefHeight="100.0" prefWidth="562.0" spacing="10.0">
+      <HBox layoutX="37.0" layoutY="286.0" prefHeight="100.0" prefWidth="330.0" spacing="10.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want gold?" />
             <CheckBox mnemonicParsing="false" text="Yes" />
          </children></HBox>
-      <HBox layoutX="14.0" layoutY="46.0" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
+      <HBox layoutX="37.0" layoutY="32.0" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
          <children>
-            <ComboBox prefWidth="150.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the CR of the chest(diffiulty/rarity)" />
          </children>
       </HBox>
+      <TextField fx:id="crBox" layoutX="269.0" layoutY="32.0" prefHeight="25.0" prefWidth="77.0" />
+      <Button fx:id="setParameters" layoutX="480.0" layoutY="324.0" mnemonicParsing="false" text="Next" />
    </children>
 </AnchorPane>

@@ -17,5 +17,6 @@
       </Text>
       <Label fx:id="finalResults" layoutX="288.0" layoutY="154.0" text="Loot" textAlignment="CENTER" />
       <Button fx:id="reRollbtn" layoutX="428.0" layoutY="354.0" mnemonicParsing="false" text="Reroll" />
+      <Button fx:id="restartBTN" layoutX="517.0" layoutY="354.0" mnemonicParsing="false" text="Restart" />
    </children>
 </AnchorPane>

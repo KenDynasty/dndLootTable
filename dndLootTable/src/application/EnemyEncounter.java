@@ -8,9 +8,9 @@ import javafx.stage.Stage;
 
 public class EnemyEncounter extends LootEvent implements RollLoot{
 	
-	private static int numEnemies;
+	
 	private static int enemyCr;
-	private static int numAllies;
+	public static int numAllies;
 	private static LootTable xpTable;
 	private static LootTable goldTable;
 	private static int individualXP;
@@ -18,21 +18,18 @@ public class EnemyEncounter extends LootEvent implements RollLoot{
 	
 	public EnemyEncounter() {
 		try {
-			xpTable = new LootTable(new File("xpValues.txt"));
+			xpTable = new LootTable(new File("xpTable.txt"));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
-	public int setDifficulty() {
-		return numEnemies * enemyCr ;
-	}
+	
 	
 
 	@Override
 	public void roll() {
-		difficulty = setDifficulty();
 		String totalXP = xpTable.getContents(difficulty);
 		int xpPerPerson = ((Integer.parseInt(totalXP)) / numAllies);
 		individualXP = xpPerPerson;

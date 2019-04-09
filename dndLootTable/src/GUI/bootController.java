@@ -21,6 +21,9 @@ public class bootController extends Application implements Initializable{
 	@FXML
 	Button selectChest;
 	
+	@FXML
+	Button selectEnemies;
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
@@ -49,8 +52,25 @@ public class bootController extends Application implements Initializable{
 				
 			}
 				
-
+		});
+		
+		selectEnemies.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				currentScene = (Stage)selectChest.getScene().getWindow();
+				Parent root2;
+				try {
+					FXMLLoader loader = new FXMLLoader(getClass().getResource("EnemyEncounter.fxml"));
+					AnchorPane root = loader.load();
+					Scene TreasureParameters = new Scene(root);
+					currentScene.setScene(TreasureParameters);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				
+				
+			}
 			
 		});
 

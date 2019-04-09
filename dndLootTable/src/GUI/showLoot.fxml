@@ -13,6 +13,7 @@
             <Font name="Britannic Bold" size="32.0" />
          </font>
       </Text>
-      <Label fx:id="finalResults" layoutX="286.0" layoutY="163.0" text="Loot" />
+      <Label fx:id="finalResults" layoutX="288.0" layoutY="154.0" text="Loot" textAlignment="CENTER" />
+      <Button fx:id="reRollbtn" layoutX="428.0" layoutY="354.0" mnemonicParsing="false" text="Reroll" />
    </children>
 </AnchorPane>

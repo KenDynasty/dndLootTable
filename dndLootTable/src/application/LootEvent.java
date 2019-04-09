@@ -11,38 +11,25 @@ import javafx.stage.Stage;
 
 
 /**
- * 
+ * LootEvent Super class to hold the variables for  EnemyEncounter
  * @author halen
  *
  */
 
-public abstract class LootEvent {
+public class LootEvent {
 	public static int difficulty;
 	public static boolean magicItems;
-	public static int numItems;
+	public static boolean mundane;
+	public static boolean gold;
 	public static StringBuilder loot = new StringBuilder();
 	
 	public LootEvent() {
 		
 	}
-
-	private int getdifficulty() {
-		return 0;
-	}
 	
-	public boolean getmagicItems() {
-		return true;
-		
-		
-	}
-	
-	public boolean getMundaneItems() {
-		return true;
-	}
-	
-	public void updateParameters(Stage primaryStage) {
-		
-		
+	public String showResults() {
+		return loot.toString();
 	}
 
+	
 }

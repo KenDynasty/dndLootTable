@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e78c8" height="411.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="608.0" />
       <Text layoutX="219.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enemy Loot">
          <font>
             <Font name="Britannic Bold" size="32.0" />
          </font>
       </Text>
-      <Label layoutX="259.0" layoutY="124.0" text="amount of exp" />
+      <Label layoutX="259.0" layoutY="124.0" text="amount of exp" fx:id="xp" />
       <Text layoutX="128.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Each player recieves ">
          <font>
             <Font name="Arial Rounded MT Bold" size="12.0" />
@@ -24,12 +29,12 @@
             <Font name="Arial Rounded MT Bold" size="12.0" />
          </font>
       </Text>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="128.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The entire group recieves :">
          <font>
             <Font name="Arial Rounded MT Bold" size="12.0" />
          </font>
       </Text>
-      <Label layoutX="298.0" layoutY="258.0" prefHeight="17.0" prefWidth="204.0" text="amount of currency" />
+      <Label fx:id="gold" layoutX="298.0" layoutY="258.0" prefHeight="17.0" prefWidth="204.0" text="amount of currency" />
+      <Button fx:id="restartBTN" layoutX="525.0" layoutY="361.0" mnemonicParsing="false" text="Restart" />
    </children>
 </AnchorPane>

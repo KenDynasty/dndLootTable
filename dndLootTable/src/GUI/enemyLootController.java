@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import application.EnemyEncounter;
 import application.LootEvent;
 import application.treasureChest;
 import javafx.application.Application;
@@ -20,17 +21,15 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class ChestShowLootController extends Application implements Initializable{
+public class enemyLootController extends Application implements Initializable{
 	@FXML
-	Label finalResults;
+	Label xp;
 	
 	@FXML
-	Button reRollbtn;
+	Label gold;
 	
 	@FXML
 	Button restartBTN;
-	
-	
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -42,20 +41,10 @@ public class ChestShowLootController extends Application implements Initializabl
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		treasureChest treasure = new treasureChest();
-		finalResults.setText(treasure.showResults());
-		
-		reRollbtn.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				treasure.reRoll();
-				finalResults.setText(treasure.showResults());
-				
-				
-			}
-		});
-		
-		
+		EnemyEncounter enemies = new EnemyEncounter();
+		enemies.roll();
+		xp.setText(enemies.getXP());
+		gold.setText(enemies.getGold());
 		
 		restartBTN.setOnAction(new EventHandler<ActionEvent>() {
 			@Override

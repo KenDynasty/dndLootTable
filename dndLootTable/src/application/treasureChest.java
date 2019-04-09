@@ -15,10 +15,7 @@ public class treasureChest extends LootEvent implements RollLoot{
 	private static LootTable tableE;
 	private static LootTable tableF;
 	private static LootTable tableG;
-	private static LootTable gemsto4;
-	private static LootTable gemsto10;
-	private static LootTable gemsto16;
-	private static LootTable gems17plus;
+
 	private static TreasureRollsOnTable roll0to4;
 	private static TreasureRollsOnTable roll5to10;
 	private static TreasureRollsOnTable roll11to16;
@@ -37,16 +34,7 @@ public treasureChest() {
 		tableD = new LootTable(new File("tableD"));
 		tableE = new LootTable(new File("tableE"));
 		tableF = new LootTable(new File("tableF"));
-		tableG = new LootTable(new File("tableF"));
-		gemsto4 = new LootTable(new File("gemTable0-4.txt"));
-		gemsto10 = new LootTable(new File("gemTable5-10.txt"));
-		gemsto16 = new LootTable(new File("gemTable11-16.txt"));
-		// file not done yet
-		//gems17plus = new LootTable(new File("gemTable17plus.txt"));
-		roll0to4 = new TreasureRollsOnTable(new File ("roll0-4.txt"));
-		roll5to10 = new TreasureRollsOnTable(new File("roll5-10.txt"));
-		roll11to16 = new TreasureRollsOnTable(new File("roll11-16.txt"));
-		roll17plus = new TreasureRollsOnTable(new File("roll17andup"));
+
 	} catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -136,7 +124,7 @@ public treasureChest() {
 		else if (selector.equals("G")) {
 			return tableG;
 		}
-		return tableA;
+
 	}
 	
 }

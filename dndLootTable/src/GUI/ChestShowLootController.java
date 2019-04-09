@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import application.LootEvent;
 import application.treasureChest;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -23,6 +24,9 @@ public class ChestShowLootController extends Application implements Initializabl
 	@FXML
 	Label finalResults;
 	
+	@FXML
+	Button reRollbtn;
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
@@ -33,7 +37,19 @@ public class ChestShowLootController extends Application implements Initializabl
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		finalResults.setText(treasureChest.showFinalResults());
+		treasureChest treasure = new treasureChest();
+		finalResults.setText(treasure.showResults());
+		
+		reRollbtn.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				treasure.reRoll();
+				finalResults.setText(treasure.showResults());
+				
+				
+			}
+		});
+				
 				
 	}
 				

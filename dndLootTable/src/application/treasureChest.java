@@ -3,12 +3,9 @@ package application;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class treasureChest extends LootEvent{
+public class treasureChest extends LootEvent implements RollLoot{
 	
-	public static boolean gold = false;
-	public static boolean mundane = false;
-	public static boolean magic = true;
-	public int[] numrolls;
+	
 	public static TreasureRollsOnTable selectedTable;
 	public static LootTable magicTable;
 	private static LootTable tableA;
@@ -18,8 +15,7 @@ public class treasureChest extends LootEvent{
 	private static LootTable tableE;
 	private static LootTable tableF;
 	private static LootTable tableG;
-	private static LootTable tableH;
-	private static LootTable tableI;
+
 	private static TreasureRollsOnTable roll0to4;
 	private static TreasureRollsOnTable roll5to10;
 	private static TreasureRollsOnTable roll11to16;
@@ -38,13 +34,7 @@ public treasureChest() {
 		tableD = new LootTable(new File("tableD"));
 		tableE = new LootTable(new File("tableE"));
 		tableF = new LootTable(new File("tableF"));
-		tableG = new LootTable(new File("tableG"));
-		tableH = new LootTable(new File("tableH"));
-		tableI = new LootTable(new File("tableI"));
-		//roll0to4 = new TreasureRollsOnTable(new File ("rolls0to4.txt"));
-		roll5to10 = new TreasureRollsOnTable(new File("roll5to10"));
-		//roll11to16 = new TreasureRollsOnTable(new File("rolls11to16.txt"));
-		//roll17plus = new TreasureRollsOnTable(new File("rolls17plus.txt"));
+
 	} catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -52,8 +42,8 @@ public treasureChest() {
 	
 	
 	}
-
-	public static void roll(int cr) {
+	@Override
+	public void roll() {
 		loot.append("The Party recieves: \n");
 		int d100 = (int) (Math.random() *100);
 		
@@ -61,12 +51,26 @@ public treasureChest() {
 			//just add the defualt gold values
 		}
 		if(mundane) {
+			if(difficulty <= 4) {
+				loot.append(gemsto4.getContents(d100));
+			}
+			else if(difficulty <= 10) {
+				loot.append(gemsto10.getContents(d100));
+			}
+			else if(difficulty <=16) {
+				loot.append(gemsto16.getContents(d100));
+			}
+			loot.append("\n");
 			//use the gem tables that kenton is making
 		}
-		if(magic) {
-			selectedTable = determineTable(cr);
-			magicTable = getLootTable("A");
-			for(int i = 0; i < 4; i++) {
+		if(magicItems) {
+			selectedTable = determineTable(difficulty);
+			magicTable = getLootTable(selectedTable.getTable(d100));
+			if(selectedTable.getRolls(d100) == 0) {
+				loot.append("No magic Items");
+				loot.append("\n");
+			}
+			for(int i = 0; i < selectedTable.getRolls(d100) ; i++) {
 				loot.append(magicTable.getContents((int)(Math.random()*100)));
 				loot.append("\n");
 			}
@@ -76,34 +80,12 @@ public treasureChest() {
 		
 		
 	}
-	
-	public static String showFinalResults() {
-		return loot.toString();
-	}
-
-	
-	public static void reroll() {
-		//clear the stringbuilder
-		loot.trimToSize();
-		roll(difficulty);
+	@Override
+	public void reRoll() {
+		loot = new StringBuilder();
+		this.roll();
 		
 	}
-	
-	
-
-	public void rollingforMagic(int difficulty, int d100) {
-		if(difficulty <= 4) {
-			
-		}else if(difficulty <=10) {
-			
-		}else if(difficulty <=16) {
-			
-		}else {
-			
-		}
-	}
-	
-	
 	
 	public static TreasureRollsOnTable determineTable(int cr) {
 		if(cr <=4) {
@@ -139,16 +121,10 @@ public treasureChest() {
 		else if(selector.equals("F")) {
 			return tableF;
 		}
-		else if(selector.equals("G")) {
+		else if (selector.equals("G")) {
 			return tableG;
 		}
-		else if(selector.equals("H")) {
-			return tableH;
-		}
-		else if(selector.equals("I")) {
-			return tableI;
-		}
-		return null;
-	}
 
+	}
+	
 }

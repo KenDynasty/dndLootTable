@@ -59,7 +59,8 @@ public class lootHoardcontroller extends Application implements Initializable{
 					treasureChest.mundane = mundaneBox.isSelected();
 					treasureChest.gold = goldBox.isSelected();
 					treasureChest.difficulty = Integer.parseInt(crBox.getText());
-					treasure.roll();
+					treasure.reRoll();
+					
 					//System.out.print("%d", treasureChest.difficulty);
 					currentScene = (Stage)setParameters.getScene().getWindow();
 					Parent root2;

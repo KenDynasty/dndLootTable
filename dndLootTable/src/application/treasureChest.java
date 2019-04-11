@@ -71,21 +71,7 @@ public treasureChest() {
 		int d100 = (int) (Math.random() *100);
 		
 		if(gold) {
-			
-			
-			if(difficulty <= 4) {
-				loot.append(goldto4.getContents(d100));
-			}
-			else if(difficulty <= 10) {
-				loot.append(goldto10.getContents(d100));
-			}
-			else if(difficulty <=16) {
-				loot.append(goldto16.getContents(d100));
-			}
-			else {
-				loot.append(goldto17plus.getContents(d100));
-			}
-			loot.append(" gold \n");
+
 		}
 		if(mundane) {
 			if(difficulty <= 4) {

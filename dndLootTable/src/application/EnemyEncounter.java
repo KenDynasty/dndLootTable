@@ -15,10 +15,18 @@ public class EnemyEncounter extends LootEvent implements RollLoot{
 	private static LootTable goldTable;
 	private static int individualXP;
 	private static String totalGold;
+	private static LootTable to4;
+	private static LootTable to10;
+	private static LootTable to16;
+	private static LootTable to17plus;
 	
 	public EnemyEncounter() {
 		try {
 			xpTable = new LootTable(new File("xpTable.txt"));
+			to4 = new LootTable(new File("individual0-4"));
+			to10 = new LootTable(new File("individual5-10"));
+			to16 = new LootTable(new File("individual11-16"));
+			to17plus = new LootTable(new File("individual17+"));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -56,18 +64,17 @@ public class EnemyEncounter extends LootEvent implements RollLoot{
 	
 	public LootTable selectTable() {
 		if (difficulty <= 4) {
-			//select the 0-4 enemy chart
+			return to4;
 		}
 		else if (difficulty <= 10) {
-			//select the 5-10 enemy chart
+			return to10;
 		}
 		else if (difficulty <= 16) {
-			//select the 11-16 chart
+			return to16;
 		}
 		else {
-			//select the 17+ chart
+			return to17plus;
 		}
-		return null;
 		// TODO Auto-generated method stub
 		
 	}

@@ -48,7 +48,7 @@ public treasureChest() {
 		int d100 = (int) (Math.random() *100);
 		
 		if(gold) {
-			//just add the defualt gold values
+			//just add the default gold values
 		}
 		if(mundane) {
 			if(difficulty <= 4) {

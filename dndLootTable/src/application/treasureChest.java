@@ -53,6 +53,7 @@ public treasureChest() {
 		gemsto4 = new LootTable(new File("gemTable0-4.txt"));
 		gemsto10 = new LootTable(new File("gemTable5-10.txt"));
 		gemsto16 = new LootTable(new File("gemTable11-16.txt"));
+		gems17plus = new LootTable(new File("gemTable17+"));
 		roll0to4 = new TreasureRollsOnTable(new File("roll0-4.txt"));
 		roll5to10 = new TreasureRollsOnTable(new File("roll5-10.txt"));
 		roll11to16 = new TreasureRollsOnTable(new File("roll5-10.txt"));
@@ -71,6 +72,19 @@ public treasureChest() {
 		int d100 = (int) (Math.random() *100);
 		
 		if(gold) {
+			   if(difficulty <= 4) {
+	                loot.append(goldto4.getContents(d100));
+	            }
+	            else if(difficulty <= 10) {
+	                loot.append(goldto10.getContents(d100));
+	            }
+	            else if(difficulty <=16) {
+	                loot.append(goldto16.getContents(d100));
+	            }
+	            else {
+	                loot.append(goldto17plus.getContents(d100));
+	            }
+	            loot.append(" gold \n");
 
 		}
 		if(mundane) {
@@ -82,6 +96,9 @@ public treasureChest() {
 			}
 			else if(difficulty <=16) {
 				loot.append(gemsto16.getContents(d100));
+			}
+			else {
+				loot.append(gems17plus.getContents(d100));
 			}
 			loot.append("\n");
 			//use the gem tables that kenton is making

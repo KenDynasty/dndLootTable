@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.enemyLootController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e78c8" height="411.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="608.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="409.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
       <Text layoutX="219.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enemy Loot">
          <font>
             <Font name="Britannic Bold" size="32.0" />

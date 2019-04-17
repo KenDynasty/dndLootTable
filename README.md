@@ -35,6 +35,8 @@ This loot table will prompt the user to input the difficult of the encounter or 
 - User inputted information coverted to read from different "table.txt"s
 - Choice between Enemy Encounter and Loot Chest
 - Fully implemented for DnD 5e
+## Demo video
+Video link : https://youtu.be/zUXniK1ZmIk
 ## Team Members:
 - Nick   Hale Team Lead
 - Kenton Kwok Code Tester

@@ -24,6 +24,13 @@ This loot table will prompt the user to input the difficult of the encounter or 
 - Look for ways to optimize code?
 - Week 6: 
 - Testing to make sure there are no bugs
+## Getting Started:
+# Install
+- Copy the project from github to eclipse
+# Running 
+- Navigate to the GUI package
+- go to the Main.java class
+- Run the program
 ## Team Members:
 - Nick   Hale Team Lead
 - Kenton Kwok Code Tester

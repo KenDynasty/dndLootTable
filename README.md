@@ -7,8 +7,8 @@ Several dungeonmasters running their game will have a hard time generating loot 
 ## How?
 This loot table will prompt the user to input the difficult of the encounter or the rarity of the loot chest. It will then output the randomized loot included in the encounter. 
 ## Deliverables
-  - Application frontend
-  - Application backend 
+  - Application GUI created in SceneBuilder
+  - Application code written in java in Eclipse
   - Documentation
 ## PLAN:
 - Week 1: 
@@ -31,6 +31,11 @@ This loot table will prompt the user to input the difficult of the encounter or 
 - Navigate to the GUI package
 - go to the Main.java class
 - Run the program
+## Features
+- User inputted information coverted to read from different "table.txt"s
+- Choice between Enemy Encounter and Loot Chest
+- Fully implemented for DnD 5e
 ## Team Members:
 - Nick   Hale Team Lead
 - Kenton Kwok Code Tester
+- Kevin Stepka Code Tester
